@@ -1,9 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
-  - init: npm dev
-    command: npm run dev && sudo apt-get update && sudo apt-get install -y xdg-utils
+  - init: echo "welcome"
+    command: npm i && npm run deploy && npm run start
 
 ports:
   - port: 1234
     onOpen: open-browser
-    
-image: gitpod/workspace-full
